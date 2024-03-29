@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/* 초기화 태그 */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit; /*부모태그의 컬러를 상속받아서 사용*/
+	cursor: pointer;
+}
+
+/* 공통 */
+
+.bt_wrap {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 0;
+}
+
+.bt_wrap a {
+	display: inline-block;
+	min-width: 80px; /* 80px보다 작아질수 없다. */
+	margin-left: 10px;
+	padding: 10px;
+	border: 1px solid rgb(255, 0, 128);
+	border-radius: 2px;
+	font-size: 1.4rem; /* 1.4배 */
+	text-align: center;
+}
+
+.bt_wrap a:hover {
+	text-decoration: underline;
+}
+
+.bt_wrap a.on { /* a태그 이면서 on 클래스를 가진 */
+	background: #000;
+	color: #fff;
+}
+
+
+
+/* 768 ~ 1000px */
+@media all and (max-width : 1000px ) {
+	.wrap {
+		width: 100vw; /* 뷰포트의 크기에 맞춰서 width를 100%로 */
+	}
+	
+	/* view.jsp, write.jsp 반응형 */
+	.board_wrap {
+		width: 100vw;}
+}
+
+/* 0 ~ 767 */
+@media all and (max-width: 767px) {
+	/* index.jsp 반응형 적용 */
+	
+	.wrap {
+	   width: 95vw; /* 뷰포트의 크기에 맞춰서 width 를 95%로 */
+	   margin: 0 auto;
+	}
+	
+	/* view.jsp, write.jsp 반응형 */
+	.board_wrap{
+	  width: 100vw;
+	}
+	
+	.board_list th:nth-of-type(1),
+	.board_list td:nth-of-type(1) {
+	  display: none;
+    }
+    
+    .board_list th:nth-of-type(3),
+	.board_list td:nth-of-type(3) {
+	  display: none;
+    }
+    
+    .board_list th:nth-of-type(4),
+	.board_list td:nth-of-type(4) {
+	  display: none;
+    }
+}
+
+
+/* 768 ~ 1000px */
+@media all and (max-width: 1000px) {
+	.wrap {
+	   width: 100vw; /* 뷰포트의 크기에 맞춰서 width 를 100%로 */
+	}
+	
+	/* view.jsp, write.jsp 반응형 */
+	.board_wrap{
+	  width: 100vw;
+	}
+	
+	.board_write .title dt {
+	  width: 70px;
+	}
+	
+	.board_write .info dt {
+	  width: 70px;
+	  margin-bottom: 10px;
+	}
+	
+	.board_write .title input[type="text"] {
+	  width: 100%;
+	}
+	
+	.board_write .info input[type="text"],
+	.board_write .info input[type="password"] {
+	  width: 80%;
+	}
+	
+	.board_write .info dl {
+	  width: 100%;
+	}
+	
+	.board_view .info dl {
+	  padding: 0 10px;
+	}
+	
+	.board_view .info dl dt,
+	.board_view .info dl dd {
+	  display: inline-block;
+	  font-size: 1rem;
+	}
+	
+	.board_view .info dl:nth-of-type(1),
+	.board_view .info dl:nth-of-type(3) {
+	  display: none;
+	}
+	
+	.board_view .info dl::before {
+	  display: none;
+	}
+	
+	.board_view .cont img {
+		width: 100%;
+	}
+}
+	
+	
+/*index */	
+	/* 헤더헤더헤더헤더헤덯 */
+header {
+	text-align: center;
+	height: 10rem;
+}
+
+header h1{
+     padding-top: 3rem;
+     font-weight: bolder;
+     color: hotpink;
+}	
+
+	
+	
+     /* 메인메인 */
+main{
+	text-align: -webkit-center;
+	font-size: 1.3rem;
+	color: rgb(255, 0, 128);
+	
+	
+}
+.customerBoard {
+	height:100%;
+	width: 85rem;
+	text-align-last: center;
+	padding-top:3rem;	
+}   
+
+.customerBoard th{
+	color:deeppink;
+}
+
+.customerBoard td{
+	color:purple;
+}
+	
+ /* 푸터푸터 */
+ footer nav{
+ padding: 5rem;
+ }
+     
+	
+/* view */
+.cardtitle{
+	background: lightpink;
+    color: purple;
+    font-size: 2rem;
+}
+.twobutton{
+	display: flex;
+    justify-content: center;
+}
+
+.allbutton{
+	width: 10rem;
+    height: 3rem;
+    color: purple;
+    background: pink;
+    border: 1px solid pink;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:1rem;
+}
+
+.delete {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+	
+.client-details {
+	display : flex;
+	border-bottom: 1px solid #ffc1ff;
+	
+}
+
+.person-info {
+	font-size: 1.5rem;
+    width: 100%;
+    height: 3rem;
+    font-weight: bold;
+    color: purple;
+    padding-top: 0.5rem;
+    
+}
+.person-info2 {
+	font-size: 1.5rem;
+    width: 100%;
+    height: 3rem;
+    font-weight: bold;
+    color: hotpink;
+    padding-top: 0.5rem;
+}
+.person{
+	width:50rem;
+}
+	
+/* write */
+
+.details {
+	display:flex;
+	
+}
+.person_info_write{
+	font-size: 1.5rem;
+    width: 30%;
+    height: 3rem;
+    font-weight: bold;
+    color: purple;	
+    
+   
+}
+	
